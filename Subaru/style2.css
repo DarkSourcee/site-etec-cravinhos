@@ -1,0 +1,93 @@
+  body {
+            font-family: Arial;
+            background-color: #eeeeee;
+            margin: 0;
+        }
+
+        header {
+            background-color: #111111;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        header img {
+            width: 80%;
+            max-width: 900px;
+        }
+
+        h1 {
+            font-size: 45px;
+        }
+
+        h2 {
+            color: blue;
+        }
+
+        section {
+            background-color: white;
+            width: 80%;
+            margin: 30px auto;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .ficha {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            background-color: white;
+            width: 200px;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .curiosidades {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .curiosidade {
+            background-color: white;
+            width: 250px;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .galeria img {
+            width: 30%;
+            margin: 10px;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+           nav {
+    background-color: black;
+    padding: 15px;
+    text-align: center;
+}
+
+            nav a {
+    color: white;
+    text-decoration: none;
+    background-color: blue;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
