@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+}
+
+.cabecalho {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 30px 0px 30px;
+    background-color: white;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.logo {
+    height: 40px;
+}
+
+.botao {
+    color: black;
+    text-decoration: none;
+    padding: 8px 14px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.botao:hover {
+    color: #003478;
+}
+
+h1, h2 {
+    color: #003478;
+    margin-bottom: 15px;
+}
+
+.capa, .secao {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.capa {
+    text-align: center;
+}
+
+.imagem, .imagem-capa, .galeria img {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.cards, .ficha, .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.card, .item, .lista li {
+    background-color: white;
+    padding: 18px;
+    border-radius: 12px;
+}
+
+.card, .item {
+    flex: 1 1 220px;
+}
+
+.galeria img {
+    flex: 1 1 250px;
+    width: 30%;
+}
+
+.item span {
+    display: block;
+    color: gray;
+}
+
+.lista {
+    list-style: none;
+}
+
+.lista li {
+    margin-bottom: 10px;
+}
+
+.final {
+    border-top: 1px solid #ccc;
+}
