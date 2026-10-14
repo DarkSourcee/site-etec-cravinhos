@@ -1,0 +1,145 @@
+body {
+    font-family: Montserrat, sans-serif;
+}
+
+.header {
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.imgprincipal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.modelo {
+    text-align: center;
+}
+
+.frase {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.foto1 {
+    height: 400px;
+    width: 500px;
+}
+
+.informacao {
+    display: flex;
+    gap: 90px;
+    align-items: center;
+    padding: 20px 60px;
+    margin-top: 50px;
+}
+
+.acordeoes {
+    flex: 1;
+}
+
+details {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+summary {
+    font-family: Montserrat, sans-serif;
+    cursor: pointer;
+}
+
+.detalhe-conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.detalhe-conteudo img {
+    flex: 0 0 35%;
+    width: 35%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.detalhe-texto {
+    flex: 1;
+    min-width: 200px;
+}
+
+.galeria {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 40px 60px;
+}
+
+.galeria h2 {
+    text-align: center;
+}
+
+.carrossel {
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.trilho {
+    display: flex;
+    animation: passar 20s infinite ease-in-out;
+}
+
+.trilho img {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.carrossel:hover .trilho {
+    animation-play-state: paused;
+}
+
+@keyframes passar {
+    0%, 16%   { transform: translateX(0); }
+    20%, 36%  { transform: translateX(-100%); }
+    40%, 56%  { transform: translateX(-200%); }
+    60%, 76%  { transform: translateX(-300%); }
+    80%, 96%  { transform: translateX(-400%); }
+    100%      { transform: translateX(0); }
+}
+
+.historia {
+    display: flex;
+    gap: 90px;
+    align-items: center;
+    padding: 20px 60px;
+    margin-top: 100px;
+}
+
+.foto2 {
+    height: 400px;
+    width: 500px;
+    object-fit: cover;
+}
+
+.historia-texto {
+    flex: 1;
+}
