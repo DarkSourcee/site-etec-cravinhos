@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fiat Mobi — Curiosidades Sobre Carros</title>
+
+    <style>
+        :root {
+            --primary: #e30613;
+            --dark: #151515;
+            --gray: #666;
+            --light: #f5f5f5;
+            --white: #ffffff;
+            --border: #e7e7e7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .container {
+            width: min(1100px, 92%);
+            margin: auto;
+        }
+
+        /* CAPA */
+
+        .hero {
+            min-height: 620px;
+            display: flex;
+            align-items: flex-end;
+            color: white;
+            position: relative;
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(0,0,0,.85),
+                    rgba(0,0,0,.15)
+                ),
+                url("https://stellantis3.dam-broadcast.com/medias/domain12808/media109666/2899974-ymq2aglwep-whr.jpg")
+                center / cover no-repeat;
+        }
+
+        .hero-content {
+            width: min(1100px, 92%);
+            margin: 0 auto;
+            padding: 70px 0;
+        }
+
+        .hero span {
+            color: #fff;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 78px);
+            line-height: 1;
+            margin: 12px 0;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 600px;
+        }
+
+        /* SEÇÕES */
+
+        section {
+            padding: 70px 0;
+        }
+
+        .section-title {
+            margin-bottom: 35px;
+        }
+
+        .section-title span {
+            color: var(--primary);
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            margin-top: 5px;
+        }
+
+        /* FICHA */
+
+        .specs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .spec-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 22px;
+        }
+
+        .spec-card small {
+            display: block;
+            color: var(--gray);
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .spec-card strong {
+            font-size: 18px;
+        }
+
+        /* HISTÓRIA */
+
+        .history {
+            background: var(--white);
+        }
+
+        .history-content {
+            max-width: 800px;
+        }
+
+        .history-content p {
+            color: #444;
+            margin-bottom: 20px;
+            font-size: 17px;
+        }
+
+        .timeline {
+            display: grid;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .timeline-item {
+            padding: 20px;
+            background: var(--light);
+            border-left: 4px solid var(--primary);
+            border-radius: 8px;
+        }
+
+        .timeline-item strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* CURIOSIDADES */
+
+        .facts {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        .fact {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 14px;
+            border: 1px solid var(--border);
+        }
+
+        .fact-number {
+            color: var(--primary);
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .fact h3 {
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .fact p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        /* ESPECIAL */
+
+        .special {
+            background: var(--dark);
+            color: white;
+        }
+
+        .special .section-title span {
+            color: #ff3b48;
+        }
+
+        .special-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .special-card {
+            padding: 30px;
+            background: #222;
+            border-radius: 15px;
+        }
+
+        .special-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .special-card p {
+            color: #bbb;
+            font-size: 15px;
+        }
+
+        /* GALERIA */
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .gallery-item {
+            height: 260px;
+            overflow: hidden;
+            border-radius: 14px;
+        }
+
+        .gallery-item:first-child {
+            grid-column: span 2;
+            grid-row: span 2;
+            height: 535px;
+        }
+
+        .gallery-item img {
+            height: 100%;
+            transition: transform .4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* FINAL */
+
+        .numbers {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .number {
+            background: var(--white);
+            border-radius: 14px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .number strong {
+            display: block;
+            font-size: 32px;
+            color: var(--primary);
+        }
+
+        .number span {
+            color: var(--gray);
+        }
+
+        .conclusion {
+            max-width: 800px;
+            font-size: 18px;
+            color: #444;
+        }
+
+        /* FONTES */
+
+        .sources {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border);
+        }
+
+        .sources ul {
+            padding-left: 20px;
+        }
+
+        .sources a {
+            color: var(--primary);
+        }
+
+        /* RESPONSIVO */
+
+        @media (max-width: 900px) {
+            .specs {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .facts {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .special-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 50px 0;
+            }
+
+            .hero {
+                min-height: 520px;
+            }
+
+            .hero-content {
+                padding-bottom: 50px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .specs,
+            .facts,
+            .numbers,
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item:first-child {
+                grid-column: auto;
+                grid-row: auto;
+                height: 280px;
+            }
+
+            .gallery-item {
+                height: 240px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         CAPA
+    ========================== -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <span>Fiat • 2016–atual</span>
+
+            <h1>Fiat Mobi</h1>
+
+            <p>
+                Pequeno por fora, pensado para encarar a cidade.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             FICHA RÁPIDA
+        ========================== -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="section-title">
+                    <span>Ficha rápida</span>
+                    <h2>Os números do Mobi</h2>
+                </div>
+
+                <div class="specs">
+
+                    <div class="spec-card">
+                        <small>Motor</small>
+                        <strong>1.0 Firefly Flex</strong>
+                    </div>
+
+                    <div class="spec-card">
+                        <small>Potência</small>
+                        <strong>75 cv</strong>
+                    </div>
+
+                    <div class="spec-card">
+                        <small>Torque</small>
+                        <strong>105 Nm</strong>
+                    </div>
+
+                    <div class="spec-card">
+                        <small>Câmbio</small>
+                        <strong>Manual 5 marchas</strong>
+                    </div>
+
+                    <div class="spec-card">
+                        <small>Tração</small>
+                        <strong>Dianteira</strong>
+                    </div>
+
+                    <div class="spec-card">
+                        <small>0–100 km/h</small>
+                        <strong>14,7 s</strong>
+                    </div>
+
+                    <div class="spec-card">
+                        <small>Velocidade máxima</small>
+                        <strong>164 km/h</strong>
+                    </div>
+
+                    <div class="spec-card">
+                        <small>Cilindros</small>
+                        <strong>3 em linha</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             HISTÓRIA
+        ========================== -->
+
+        <section class="history">
+
+            <div class="container">
+
+                <div class="section-title">
+                    <span>História</span>
+                    <h2>Como surgiu o Mobi?</h2>
+                </div>
+
+                <div class="history-content">
+
+                    <p>
+                        O Fiat Mobi chegou ao mercado brasileiro em 2016,
+                        criado com uma proposta bastante clara: oferecer um
+                        carro compacto, prático e adequado ao uso urbano.
+                    </p>
+
+                    <p>
+                        Desenvolvido no Brasil, o modelo passou por diferentes
+                        versões, motores e equipamentos ao longo dos anos,
+                        mantendo suas dimensões compactas como uma de suas
+                        principais características.
+                    </p>
+
+                    <div class="timeline">
+
+                        <div class="timeline-item">
+                            <strong>2016 — Lançamento</strong>
+                            O Fiat Mobi chega ao mercado brasileiro.
+                        </div>
+
+                        <div class="timeline-item">
+                            <strong>2017 — Câmbio GSR</strong>
+                            O modelo passa a oferecer uma transmissão automatizada.
+                        </div>
+
+                        <div class="timeline-item">
+                            <strong>2025 — Motor Firefly</strong>
+                            O Mobi passa a utilizar o motor 1.0 Firefly de três cilindros.
+                        </div>
+
+                        <div class="timeline-item">
+                            <strong>2026 — Atualizações</strong>
+                            A linha recebe mudanças no interior e novos equipamentos.
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CURIOSIDADES
+        ========================== -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="section-title">
+                    <span>Curiosidades ⭐</span>
+                    <h2>Você sabia?</h2>
+                </div>
+
+                <div class="facts">
+
+                    <article class="fact">
+                        <div class="fact-number">01</div>
+                        <h3>700 mil unidades</h3>
+                        <p>
+                            O Mobi alcançou a marca de 700 mil unidades
+                            produzidas em abril de 2026.
+                        </p>
+                    </article>
+
+                    <article class="fact">
+                        <div class="fact-number">02</div>
+                        <h3>Teve câmbio GSR</h3>
+                        <p>
+                            Em 2017, o modelo ganhou uma transmissão
+                            automatizada de embreagem simples.
+                        </p>
+                    </article>
+
+                    <article class="fact">
+                        <div class="fact-number">03</div>
+                        <h3>Três cilindros</h3>
+                        <p>
+                            O motor Firefly atual possui três cilindros
+                            em linha e 999 cm³.
+                        </p>
+                    </article>
+
+                    <article class="fact">
+                        <div class="fact-number">04</div>
+                        <h3>Versão Trekking</h3>
+                        <p>
+                            A versão Trekking possui visual aventureiro,
+                            com elementos exclusivos de acabamento.
+                        </p>
+                    </article>
+
+                    <article class="fact">
+                        <div class="fact-number">05</div>
+                        <h3>Feito no Brasil</h3>
+                        <p>
+                            O Mobi é produzido no Polo Automotivo Stellantis
+                            de Betim, em Minas Gerais.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             O QUE TORNA ESPECIAL
+        ========================== -->
+
+        <section class="special">
+
+            <div class="container">
+
+                <div class="section-title">
+                    <span>Por que ele chama atenção?</span>
+                    <h2>O que torna o Mobi especial?</h2>
+                </div>
+
+                <div class="special-grid">
+
+                    <article class="special-card">
+                        <h3>📏 Tamanho compacto</h3>
+                        <p>
+                            Suas dimensões reduzidas fazem parte da proposta
+                            do Mobi para utilização nas cidades.
+                        </p>
+                    </article>
+
+                    <article class="special-card">
+                        <h3>🔧 Motor Firefly</h3>
+                        <p>
+                            O atual motor 1.0 possui três cilindros e foi
+                            desenvolvido com foco em eficiência.
+                        </p>
+                    </article>
+
+                    <article class="special-card">
+                        <h3>🛞 Visual Trekking</h3>
+                        <p>
+                            A versão Trekking adiciona elementos visuais
+                            que remetem ao estilo aventureiro.
+                        </p>
+                    </article>
+
+                    <article class="special-card">
+                        <h3>🖥️ Interior atualizado</h3>
+                        <p>
+                            A linha 2026 recebeu mudanças no painel,
+                            volante e equipamentos.
+                        </p>
+                    </article>
+
+                    <article class="special-card">
+                        <h3>🇧🇷 Projeto brasileiro</h3>
+                        <p>
+                            O Mobi foi desenvolvido e é produzido no Brasil,
+                            em Betim, Minas Gerais.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             GALERIA
+        ========================== -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="section-title">
+                    <span>Galeria</span>
+                    <h2>Fiat Mobi em detalhes</h2>
+                </div>
+
+                <div class="gallery">
+
+                    <div class="gallery-item">
+                        <img
+                            src="https://stellantis3.dam-broadcast.com/medias/domain12808/media109666/2899974-ymq2aglwep-whr.jpg"
+                            alt="Fiat Mobi exterior"
+                        >
+                    </div>
+
+                    <div class="gallery-item">
+                        <img
+                            src="https://midias.vrum.com.br/_midias/jpg/2025/07/18/mobi_like_my26_010-56887855.jpg"
+                            alt="Interior do Fiat Mobi"
+                        >
+                    </div>
+
+                    <div class="gallery-item">
+                        <img
+                            src="https://www.planetcarsz.com/img/noticias/2025/07/mobi-trekking-my26-001-20250721175127-1600x1067.jpg"
+                            alt="Fiat Mobi Trekking"
+                        >
+                    </div>
+
+                    <div class="gallery-item">
+                        <img
+                            src="https://stellantis3.dam-broadcast.com/medias/domain12808/media109666/2900061-17fqimv63b-whr.jpg"
+                            alt="Detalhe do Fiat Mobi"
+                        >
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FINAL
+        ========================== -->
+
+        <section class="history">
+
+            <div class="container">
+
+                <div class="section-title">
+                    <span>Fiat Mobi</span>
+                    <h2>Em números</h2>
+                </div>
+
+                <div class="numbers">
+
+                    <div class="number">
+                        <strong>2016</strong>
+                        <span>Ano de lançamento</span>
+                    </div>
+
+                    <div class="number">
+                        <strong>700 mil</strong>
+                        <span>Unidades produzidas</span>
+                    </div>
+
+                    <div class="number">
+                        <strong>MG</strong>
+                        <span>Produção em Betim</span>
+                    </div>
+
+                </div>
+
+                <p class="conclusion">
+                    O Fiat Mobi construiu sua história no mercado brasileiro
+                    apostando em uma proposta simples: oferecer um carro
+                    pequeno e prático para o uso urbano. Ao longo dos anos,
+                    recebeu novos motores, versões e equipamentos, mantendo
+                    suas dimensões compactas como parte importante de sua
+                    identidade.
+                </p>
+
+
+                <div class="sources">
+
+                    <h3>Fontes utilizadas</h3>
+
+                    <ul>
+                        <li>
+                            <a
+                                href="https://www.media.stellantis.com/br-pt/fiat/"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                Stellantis Media — Fiat
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="https://o.media.stellantis.com/br-pt/download-model-document/370"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                Ficha técnica oficial — Fiat Mobi
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="https://www.media.stellantis.com/br-pt/fiat/press/fiat-mobi-chega-em-sua-linha-2026-com-o-interior-remodelado-e-novos-equipamentos"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                Fiat Mobi — Linha 2026
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+
+    <footer style="
+        background:#111;
+        color:#888;
+        text-align:center;
+        padding:30px 20px;
+        font-size:14px;
+    ">
+        © 2026 — Curiosidades Sobre Carros
+    </footer>
+
+</body>
+</html>
