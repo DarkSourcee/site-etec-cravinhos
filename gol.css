@@ -1,0 +1,218 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+header {
+    background-color: #111;
+    color: white;
+    padding: 25px 8%;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #ccc;
+}
+
+.capa {
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: white;
+}
+
+.capa img {
+    width: 80%;
+    max-width: 1000px;
+    margin-bottom: 30px;
+}
+
+.capa h2 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.capa p {
+    font-size: 20px;
+    color: #555;
+}
+
+section {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 25px;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    border-left: 5px solid #222;
+    padding-left: 15px;
+}
+
+.ficha {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.historia {
+    background-color: white;
+    padding: 35px;
+    border-radius: 12px;
+}
+
+.historia p {
+    margin-bottom: 18px;
+    font-size: 17px;
+}
+
+
+.curiosidades {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.curiosidade {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.curiosidade span {
+    font-size: 30px;
+}
+
+.curiosidade h3 {
+    margin: 10px 0;
+}
+
+.especial {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.especial .card {
+    min-height: 150px;
+}
+
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.galeria img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+.final {
+    background-color: #111;
+    color: white;
+    padding: 50px 25px;
+    text-align: center;
+}
+
+.final h2 {
+    border: none;
+    padding: 0;
+}
+
+.final p {
+    max-width: 800px;
+    margin: 15px auto;
+    color: #ccc;
+}
+
+.fontes {
+    margin-top: 30px;
+}
+
+.fontes a {
+    color: white;
+}
+
+
+@media (max-width: 800px) {
+
+    .ficha {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .curiosidades {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .especial {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .capa h2 {
+        font-size: 32px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .ficha {
+        grid-template-columns: 1fr;
+    }
+
+    .curiosidades {
+        grid-template-columns: 1fr;
+    }
+
+}
